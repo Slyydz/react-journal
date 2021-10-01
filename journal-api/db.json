@@ -8,39 +8,11 @@
       "id": 1
     },
     {
-      "concept": "dsad",
-      "journalEntry": "dasdsa",
-      "mood": "Happy",
-      "date": 1633107750487,
-      "id": 2
-    },
-    {
-      "concept": "adsa",
-      "journalEntry": "sadasdsa",
-      "mood": "Happy",
-      "date": 1633107897073,
-      "id": 3
-    },
-    {
-      "concept": "dasdas",
-      "journalEntry": "dasd",
-      "mood": "Happy",
-      "date": 1633108130639,
-      "id": 4
-    },
-    {
       "concept": "Working?",
       "journalEntry": "Is this working?",
       "mood": "Ok",
       "date": 1633108517230,
       "id": 5
-    },
-    {
-      "concept": "dwa",
-      "journalEntry": "dadsadsa",
-      "mood": "Ok",
-      "date": 1633108628720,
-      "id": 6
     }
   ]
 }

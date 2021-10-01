@@ -1,28 +1,39 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { createPost } from "../manangers/PostManager";
 import "./InputCards.css"
 
 export const InputCards = () => {
 
-    const [inputConcept, changeInputConcept] = useState();
-    const [inputJEntry, changeJEntry] = useState();
-    const [inputMood, changeMood] = useState();
+    const [inputConcept, changeInputConcept] = useState("");
+    const [inputJEntry, changeJEntry] = useState("");
+    const [inputMood, changeMood] = useState("");
+    const existDialog = useRef();
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const journalObj = {
-            concept: inputConcept,
-            journalEntry: inputJEntry,
-            mood:   inputMood,
-            date: Date.now()
+        if (inputConcept === "" || inputJEntry === "" || inputMood === "") {
+            e.preventDefault();
+            existDialog.current.showModal()
+        } else {
+            const journalObj = {
+                concept: inputConcept,
+                journalEntry: inputJEntry,
+                mood: inputMood,
+                date: Date.now()
+            }
+
+            createPost(journalObj).then(() => {
+                changeInputConcept("");
+                changeJEntry("");
+                changeMood("");
+            }
+            );
+
+            document.getElementById("wholeForm").reset();
         }
 
-        createPost(journalObj);
-
-        document.getElementById("wholeForm").reset();
-        
     }
 
 
@@ -41,13 +52,18 @@ export const InputCards = () => {
                     </fieldset>
                     <fieldset className="mood-field">
                         <label htmlFor="selectMood">Todays Mood</label>
-                        <select name="selectMood" id="selectMood" onChange={event => changeMood(event.target.value)}>
-                            <option>Choose a mood</option>
+                        <select defaultValue="Choose a mood" id="selectMood" onChange={event => changeMood(event.target.value)}>
+                            <option disabled={true}>Choose a mood</option>
                             <option value="Happy">Happy</option>
                             <option value="Ok">Ok</option>
                             <option value="Sad">Sad</option>
                         </select>
                     </fieldset>
+
+                    <dialog className="dialog dialog--auth" ref={existDialog}>
+                        <div>Please complete the form before submitting</div>
+                        <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
+                    </dialog>
                 </div>
             </section>
 
