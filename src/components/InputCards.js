@@ -22,6 +22,7 @@ export const InputCards = () => {
         createPost(journalObj);
 
         document.getElementById("wholeForm").reset();
+        
     }
 
 
@@ -41,6 +42,7 @@ export const InputCards = () => {
                     <fieldset className="mood-field">
                         <label htmlFor="selectMood">Todays Mood</label>
                         <select name="selectMood" id="selectMood" onChange={event => changeMood(event.target.value)}>
+                            <option>Choose a mood</option>
                             <option value="Happy">Happy</option>
                             <option value="Ok">Ok</option>
                             <option value="Sad">Sad</option>
