@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+.contentMain,
+select,
+textarea {
+	color: black;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+html {
+	background-color: rgb(160,160,160);
+}
+
+body{
+	display:flex;
+	justify-content: center;
+	max-width: 1250;
+}
+
+header{
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	max-width: 620px;
+}
+
+option{
+	color: black;
+}
+
+.contentMain {
+	display: flex;
+	justify-content: center;
+	flex-flow: column wrap;
+	width: 650px;
+	margin: 0;
+	padding: 0;
+}
+
+.conceptCovered{
+	padding-right: 100px;
+}
+
+.journalEntry{ 
+	border-style: solid;
+}
+
+form{
+	max-width: 650px;
+}
+
+.buttonWithLog {
+	padding-left: 5px
+}
+
+.newPost{
+	width: 600px;
+	height: 200px;
+}
+.newPost__input{
+	width: 300px;
+	height: 20px;
+}
