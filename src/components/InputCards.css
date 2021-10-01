@@ -1,0 +1,27 @@
+.contentMain {
+	display: flex;
+	justify-content: center;
+	flex-flow: column wrap;
+	width: 650px;
+	margin: 0;
+	padding: 0;
+}
+
+label{
+    margin-right: 50px;
+}
+
+.concept-field {
+    display: flex;
+    align-items: center;
+}
+
+.entry-field {
+    display: flex;
+    align-items: center;
+}
+
+.mood-field {
+    display: flex;
+    align-items: center;
+}

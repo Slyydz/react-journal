@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "concept": "test",
+      "journalEntry": "Testing json posting",
+      "mood": "Ok",
+      "date": 1633105374867,
+      "id": 1
+    }
+  ]
+}
