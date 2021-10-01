@@ -8,7 +8,7 @@ export const Home = () => {
             <h1>Brady's Journal</h1>
         </header>
         <InputCards />
-
+        
         </>
 
     )

@@ -1,5 +1,14 @@
+const url = "http://localhost:8088";
+
+export const getPosts = () => {
+    return fetch(`${url}/posts`)
+    .then(response => response.json());
+}
+
+
+
 export const createPost = postObj => {
-    return fetch("http://localhost:8088/posts", {
+    return fetch(`${url}/posts`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
