@@ -5,7 +5,10 @@ export const getPosts = () => {
     .then(response => response.json());
 }
 
-
+export const getPostsByMood = (input) => {
+    return fetch(`${url}/posts/?mood=${input}`)
+    .then(response => response.json());
+}
 
 export const createPost = postObj => {
     return fetch(`${url}/posts`, {
@@ -18,3 +21,10 @@ export const createPost = postObj => {
     })
         .then(response => response.json())
 }
+
+export const deletePost = (id) => {
+    return fetch(`${url}/posts/${id}`, {
+      method: "DELETE"
+    })
+    .then(result => result.json())
+  }

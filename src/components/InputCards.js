@@ -36,10 +36,6 @@ export const InputCards = () => {
 
     }
 
-    const handleFilter = (e) => {
-        console.log(e);
-    }
-
 
 
     return (
@@ -72,14 +68,6 @@ export const InputCards = () => {
             </section>
 
             <button onClick={(e) => handleSubmit(e)}>Submit</button>
-            <fieldset className="filter-mood">
-                        <select name="filterMood" id="filterMood" onChange={event => handleFilter(event.target.value)}>
-                            <option>Filter by mood</option>
-                            <option value="Happy">Happy</option>
-                            <option value="Ok">Ok</option>
-                            <option value="Sad">Sad</option>
-                        </select>
-                    </fieldset>
         </form>
     )
 }
