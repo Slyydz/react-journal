@@ -6,16 +6,12 @@ export const PostList = () => {
 
     const [posts, changePosts] = useState([]);
 
-    const getPostsCall = () => {
+    useEffect(() => {
         return getPosts().then(response => {
             changePosts(response);
-            console.log(posts);
         });
     }
-
-    useEffect(() => {
-        getPostsCall()
-    }, []);
+    ,[posts]);
 
     return (
 
