@@ -1,4 +1,4 @@
-const url = "http://localhost:8088";
+const url = "http://localhost:5002";
 
 export const getPosts = () => {
     return fetch(`${url}/posts`)
