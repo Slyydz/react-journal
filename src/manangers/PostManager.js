@@ -1,11 +1,14 @@
-const url = "http://localhost:8088";
+const url = "http://localhost:5002";
 
 export const getPosts = () => {
     return fetch(`${url}/posts`)
     .then(response => response.json());
 }
 
-
+export const getPostsByMood = (input) => {
+    return fetch(`${url}/posts/?mood=${input}`)
+    .then(response => response.json());
+}
 
 export const createPost = postObj => {
     return fetch(`${url}/posts`, {
@@ -18,3 +21,10 @@ export const createPost = postObj => {
     })
         .then(response => response.json())
 }
+
+export const deletePost = (id) => {
+    return fetch(`${url}/posts/${id}`, {
+      method: "DELETE"
+    })
+    .then(result => result.json())
+  }
