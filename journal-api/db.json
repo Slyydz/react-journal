@@ -8,11 +8,33 @@
       "id": 1
     },
     {
+      "concept": "More testing",
+      "journalEntry": "dummy data",
+      "mood": "Sad",
+      "date": 1633363383319,
+      "id": 9
+    },
+    {
+      "concept": "xafcdsa",
+      "journalEntry": "fdsffdsfsd",
+      "mood": "Sad",
+      "date": 1633363617074,
+      "id": 10
+    },
+    {
       "concept": "test",
-      "journalEntry": "testing ",
+      "journalEntry": "yup yup",
       "mood": "Ok",
-      "date": 1633362217726,
-      "id": 8
+      "date": 1633373285416,
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "email": "colby@test.com",
+      "address": "ayooo",
+      "name": "Colby Ryan",
+      "id": 1
     }
   ]
 }
